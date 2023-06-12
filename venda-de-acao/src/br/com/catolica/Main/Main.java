@@ -1,6 +1,7 @@
 package br.com.catolica.Main;
 
-
+import br.com.catolica.Controller.AcaoController;
+import br.com.catolica.Controller.ClienteController;
 import br.com.catolica.DAO.AcaoDAO;
 import br.com.catolica.DAO.PessoaDAO;
 import br.com.catolica.Model.Acao;
@@ -16,7 +17,8 @@ public class Main {
         Scanner scr = new Scanner(System.in);
         PessoaDAO pessoa = new PessoaDAO();
         AcaoDAO acaoDAO = new AcaoDAO();
-
+        ClienteController clienteController = new ClienteController();
+        AcaoController acaoController = new AcaoController();
         List<Acao> carteiraDeAcoes = new ArrayList<>();
 
 
@@ -61,7 +63,7 @@ public class Main {
             } else if (opc == 2) {
 
                 System.out.print("Digite o indicie da ação que deseja buscar: ");
-                acaoDAO.buscarAcao(scr.nextInt());
+                acaoController.buscarAcao(scr.nextInt());
 
             } else if (opc == 3) {
 
@@ -80,5 +82,39 @@ public class Main {
     }
 
 }
+
+
+
+
+        /*
+        pessoa.adicionarPessoa("Rafael");
+        pessoa.adicionarPessoa("Claudio");
+        System.out.println("Adicione uma pessoa a lista: ");
+        pessoa.adicionarPessoa(scr.nextLine());
+
+
+        pessoa.listarPessoa();
+
+        System.out.println("Busque uma pessoa pela posiçãp ja existente na lista: ");
+        pessoa.buscarPessoa(scr.nextInt());
+
+        System.out.println(">ATUALIZANDO LISTA DE PESSOAS<");
+        System.out.println("Remova uma pessoa pela posição ja existente na lista: ");
+        pessoa.removerPessoa(scr.nextInt());
+
+        System.out.println("LISTA ATUALIZADA");
+        pessoa.listarPessoa();
+
+
+        AcaoDAO acao = new AcaoDAO();
+
+        acao.adicionarAcao(acao1);
+        acao.adicionarAcao(acao2);
+        acao.adicionarAcao(acao3);
+        acao.listarAcao();
+
+        System.out.println(">ATUALIZANDO AÇÕES<");
+        acao.removerAcao(2);
+        acao.listarAcao();*/
 
 
