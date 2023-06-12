@@ -46,6 +46,10 @@ public class EstruturaVenda {
         this.valorVenda = valorVenda;
     }
 
+
+
+
+
     @Override
     public String toString() {
         return "VendaAcao{" +

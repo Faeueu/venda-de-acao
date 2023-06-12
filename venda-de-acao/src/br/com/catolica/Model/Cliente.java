@@ -1,11 +1,11 @@
 package br.com.catolica.Model;
 
 
-import br.com.catolica.Interface.VerifiPessoa;
+import br.com.catolica.Interface.VerifiCliente;
 
 import java.util.UUID;
 
-public class Cliente implements VerifiPessoa {
+public class Cliente implements VerifiCliente {
 
     private UUID id;
 
@@ -21,6 +21,11 @@ public class Cliente implements VerifiPessoa {
         this.cpf = cpf;
     }
 
+
+    @Override
+    public UUID setId() {
+        return null;
+    }
 
     public UUID getId() {
         return id;
